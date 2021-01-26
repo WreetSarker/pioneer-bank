@@ -105,13 +105,7 @@
             const withdrawNumber = parseFloat(withdrawAmount);
 
             updateSpanValue('currentWithdraw', withdrawNumber);
-
-            const totalText = document.getElementById('currentBalance').innerText;
-            const total = parseFloat(totalText);
-            const finalTotal = total - withdrawNumber;
-            document.getElementById('currentBalance').innerText = finalTotal;
-            document.getElementById('withdrawAmount').value = '';
-
+            updateSpanValue('currentBalance', -1 * withdrawNumber);
         });
 
 
